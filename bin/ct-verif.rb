@@ -151,6 +151,7 @@ begin
   if params[:verify]
     flags = []
     flags << "/doModSetAnalysis"
+    flags << "/printModel 4"
     flags << "/loopUnroll:#{params[:unroll]}" if params[:unroll]
     flags << "/timeLimit:#{params[:time]}" if params[:time]
     warn "warning: only unrolling up to #{params[:unroll]}" if params[:unroll]
